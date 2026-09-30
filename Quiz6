@@ -1,0 +1,55 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+
+void analyzeNumber(int num);
+
+int main() {
+    int number;
+    
+    printf("========================================\n");
+    printf("          NUMBER ANALYZER\n");
+    printf("========================================\n\n");
+
+    
+    for(int i = 1; i <= 5; i++) {
+        printf("Enter number %d: ", i);
+        scanf("%d", &number);
+        
+        
+        analyzeNumber(number);
+        
+        printf("\n"); 
+    }
+    
+    printf("Program finished.\n");
+    
+    return 0;
+}
+
+
+void analyzeNumber(int num) {
+    
+    if(num > 0) {
+        printf("The number is POSITIVE.\n");
+    } else if(num < 0) {
+        printf("The number is NEGATIVE.\n");
+    } else {
+        printf("The number is ZERO.\n");
+    }
+    
+    
+    
+    if(num % 2 == 0) {
+        printf("The number is EVEN.\n");
+    } else {
+        printf("The number is ODD.\n");
+    }
+}
